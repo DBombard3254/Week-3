@@ -1,0 +1,7 @@
+udevadm info
+dd if=/dev/zero of=new_file bs=1024 count=1
+mknod /dev/sda1 b 8 2
+sudo /lib/udev/ata_id --export /dev/sda
+udevadm info --query=all --name=/dev/sda
+udevadm monitor
+udevadm monitor --kernel --subsystem-match=scsi
