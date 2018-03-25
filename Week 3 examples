@@ -1,3 +1,4 @@
+#!/bin/bash
 udevadm info
 dd if=/dev/zero of=new_file bs=1024 count=1
 mknod /dev/sda1 b 8 2
